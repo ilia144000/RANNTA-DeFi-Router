@@ -122,19 +122,30 @@ Copy code
 ## 📜 Licensing & Restrictions
 
 This repository exposes only the **public shell** of the RANNTA Router.  
-Private routing logic and liquidity algorithms are the **intellectual property of the RANNTA Protocol**.
+
+Private routing logic and liquidity algorithms are the  
+**intellectual property of the RANNTA Protocol**.
+
+---
 
 ### ❌ You may NOT:
+
 - copy or reverse-engineer private routing logic  
 - build derivative routing engines for commercial use  
 - use the RANNTA identity for competing products  
 - package, republish, or resell the routing logic  
 
-### ✔ You MAY:
-- use public API endpoints (`/health`, `/prices`, `/route`) in your applications  
-- build UI integrations  
-- contribute improvements to non-core open code  
+---
 
-For commercial licensing or partnership inquiries, please contact the maintainer.
+### ✔ You MAY:
+
+- use public API endpoints (`/health`, `/prices`, `/route`)  
+- build UI integrations  
+- contribute improvements to non-core open components  
+
+---
+
+For commercial licensing or partnership inquiries,  
+please contact the maintainer.
 
 
