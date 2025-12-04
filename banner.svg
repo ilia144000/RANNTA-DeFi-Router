@@ -1,0 +1,43 @@
+<svg width="1920" height="480" viewBox="0 0 1920 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1920" height="480" fill="#0E0E0F"/>
+
+  <!-- Subtle gradient glow -->
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1920" y2="0">
+      <stop offset="0%" stop-color="#C7A148"/>
+      <stop offset="50%" stop-color="#F5DFA2"/>
+      <stop offset="100%" stop-color="#C7A148"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffffff05"/>
+      <stop offset="100%" stop-color="#00000000"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="480" fill="url(#glow)"/>
+
+  <!-- Griffin Silhouette (very faint) -->
+  <path d="M620 350 Q640 300 700 260 Q760 220 780 180 Q800 140 780 110 Q760 80 720 90 Q680 100 650 140 Q620 180 600 240 Q580 300 600 350 Z"
+        fill="#FFFFFF08" />
+
+  <!-- Data Waves -->
+  <polyline points="0,360 200,330 400,350 600,300 800,340 1000,310 1200,330 1400,300 1600,340 1800,320 1920,350"
+            stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.25"/>
+
+  <!-- Central Title -->
+  <text x="960" y="200" text-anchor="middle" fill="#FFFFFF" font-size="56" font-family="Inter, sans-serif" letter-spacing="2">
+    RANNTA DeFi Router
+  </text>
+
+  <!-- Subtitle -->
+  <text x="960" y="260" text-anchor="middle" fill="url(#gold)" font-size="28" font-family="Inter, sans-serif" letter-spacing="3">
+    Intelligent Liquidity Layer for TON
+  </text>
+
+  <!-- Bottom subtle line -->
+  <line x1="360" y1="380" x2="1560" y2="380" stroke="url(#gold)" stroke-width="1.2" opacity="0.45"/>
+
+</svg>
