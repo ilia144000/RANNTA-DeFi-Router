@@ -48,23 +48,28 @@ The RANNTA Router fills this gap by providing:
   "service": "RANNTA DeFi Router",
   "version": "phase-4"
 }
-GET /prices
+
+###GET /prices
 json
 Copy code
 {
-  "pair": "TON/USDT",
+
+### "pair": "TON/USDT",
   "bestPrice": "...",
   "sources": [...]
 }
-GET /route?from=TON&to=USDT&amount=100
+
+### GET /route?from=TON&to=USDT&amount=100
 json
 Copy code
 {
-  "bestDex": "STON.fi",
+
+ ### "bestDex": "STON.fi",
   "estimatedOut": "...",
   "impact": "...",
   "route": [...]
 }
+
 🧩 Architecture (Public Layer Only)
 bash
 Copy code
