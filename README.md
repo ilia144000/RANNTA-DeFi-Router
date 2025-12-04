@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./banner.svg" width="100%" />
+</p>
+
 # RANNTA DeFi Router — Liquidity Intelligence Layer for TON
 
 > **Alpha Release — Public Shell Only**  
