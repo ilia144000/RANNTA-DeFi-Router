@@ -5,53 +5,60 @@
 # RANNTA DeFi Router — Liquidity Intelligence Layer for TON
 
 > **Alpha Release — Public Shell Only**  
-> Core algorithms, liquidity scoring, and routing logic remain private.
+> Core algorithms, liquidity scoring models, and routing logic remain private.
+
+Created and maintained by **ilia144000** — Founder of **RANNTA Protocol**.
 
 ---
 
 ## 🔍 Overview
 
-RANNTA DeFi Router introduces a missing protocol primitive for **The Open Network (TON)**:  
-a unified intelligence layer for **multi-DEX price discovery, best-path routing, and liquidity analysis**.
+The **RANNTA DeFi Router** introduces a missing protocol primitive for  
+**The Open Network (TON): a unified intelligence layer for multi-DEX  
+price discovery, best-path routing, and liquidity analysis.**
 
-TON today has two major DEXs — **STON.fi** and **DeDust** — yet no shared routing surface,  
-no consolidated price feed, and no mechanism for wallets or dApps to evaluate swap efficiency.
+TON currently operates with two major DEXs — **STON.fi** and **DeDust** —  
+yet lacks a shared routing surface, a consolidated price engine,  
+or any mechanism for wallets and dApps to evaluate swap efficiency.
 
-RANNTA Router fills this gap with a lightweight, extensible service:
+RANNTA Router fills this structural gap with a lightweight, extensible public service:
 
 - `/prices` → unified TON/USDT pricing  
 - `/route` → best-path analysis across DEXs  
 - `/health` → service status  
-- Minimal UI for live monitoring  
+- minimal monitoring UI  
 
-This repository exposes only the **integration layer**.  
-All strategic routing logic, liquidity weighting, predictive models, and split execution mechanisms remain private.
+> ⚠️ **Important**  
+> This repository exposes only the **integration layer**.  
+> All strategic routing logic, liquidity weighting, predictive heuristics,  
+> and split execution mechanisms remain private and proprietary.
 
 ---
 
-## 🧠 Why This Project Exists (TON’s Missing Component)
+## 🧠 Why This Project Exists — TON’s Missing DeFi Component
 
-While TON has grown rapidly, several critical DeFi primitives are still absent:
+As TON grows, several core DeFi primitives remain absent:
 
-1. **No aggregator or unified price engine**  
-2. **No routing intelligence for wallets**  
-3. **No cross-DEX liquidity scoring**  
-4. **No public API for unified TON market insight**  
-5. **No prediction/impact heuristics for large swaps**
+1. No aggregator or unified price engine  
+2. No routing intelligence for wallets  
+3. No cross-DEX liquidity scoring  
+4. No public API for consolidated market insight  
+5. No heuristics for large-swap impact or slippage prediction  
 
 These limitations affect:
 
-- Wallets  
+- wallets  
 - NFT marketplaces  
-- Bots & analytics tools  
+- analytics dashboards  
+- algorithmic trading bots  
 - TON DeFi developers  
 
-RANNTA Router is designed to serve as the **foundation layer** for all of the above.
+The **RANNTA Router** is designed to become the shared, scalable  
+**liquidity intelligence layer** for the TON ecosystem.
 
 ---
 
 ## 🧩 Architecture (Public Layer)
-
 
 Client / Wallet / Marketplace
 │
@@ -59,58 +66,93 @@ Client / Wallet / Marketplace
 RANNTA Router API (public)
 ├── /health
 ├── /prices
-├── /route
+└── /route
 │
 ▼
 Abstraction Layer (open)
 │
 ▼
 RANNTA Liquidity Core (private)
-├── multi-DEX indexing
-├── liquidity scoring
+├── multi-DEX indexer
+├── liquidity scoring engine
 ├── split-route planner
 ├── RANNTA optimization logic
-├── predictive heuristics
+└── predictive heuristics
 
 ---
 
 ## 🚀 Use Cases
 
-- **ArcWallet Gen-5** — smart routing inside the wallet  
-- **RANNTAverse Marketplace** — optimal TON ↔ RANNTA swaps for NFT payments  
-- **Bots & dashboards** — price feed extraction  
-- **Developers** — simple and consistent routing API  
+- **ArcWallet Gen-5** — in-wallet smart routing integration  
+- **RANNTAverse Marketplace** — optimal TON ↔ RANNTA swap paths for NFT payments  
+- **Bots & dashboards** — unified real-time price feed  
+- **Developers** — stable routing API for TON DeFi tooling  
 
 ---
 
-## 🛡 Licensing and Intellectual Property
+## ⚡ Public API Sketch
 
-This repository is intentionally partial.  
-The full routing engine is proprietary to the **RANNTA Protocol** to preserve:
+This is **not** the core algorithm — only the public interface shape:
 
-- ecosystem advantage  
-- security of liquidity models  
-- revenue pathways  
-- protection against cloning  
+```http
+GET /health
+→ { ok: true, service: "RANNTA DeFi Router", version: "phase-4" }
 
-Commercial usage or derivative routing services require written approval.
+GET /prices
+→ { pair: "TON/USDT", bestPrice: "...", sources: [...] }
 
----
+GET /route?from=TON&to=USDT&amount=...
+→ {
+    bestDex: "STON.fi",
+    estimatedOut: "...",
+    impact: "...",
+    route: [...]
+  }
+🛡 Licensing & Intellectual Property
 
-## ⚡ Status
+Copyright © 2025 by ilia144000
+All Rights Reserved.
 
-**Current Release:** Phase-4 UI  
-**Next Phases:**  
-- Phase-5: Split execution engine  
-- Phase-6: Predictive liquidity model  
-- Phase-7: RANNTA-native optimization layer  
+This repository represents only the public shell of the RANNTA Router.
+The full routing engine — including scoring models, indexing logic, and
+optimization algorithms — is proprietary to the RANNTA Protocol.
 
----
+You may not:
 
-## ✨ About RANNTA
+use the private algorithms commercially
 
-RANNTA is a symbolic, artistic, and technical protocol on **The Open Network**,  
-building financial and creative tools powered by intelligence, narrative, and community.
+clone, replicate, or reverse-engineer the routing logic
 
-The DeFi Router is one of its core infrastructural components.
+build derivative routing engines without explicit written permission
 
+use the RANNTA name or identity for competing products
+
+You may:
+
+use the public API in your wallet/dApp
+
+build integrations on top of /health, /prices, /route
+
+contribute improvements to the UI layer or public interface
+
+For partnership or commercial licensing, contact the maintainer.
+
+⚡ Status
+
+Current Release: Phase-4 (Monitoring UI)
+Upcoming:
+
+Phase-5 → Split execution engine
+
+Phase-6 → Predictive liquidity model
+
+Phase-7 → RANNTA-native optimization layer
+
+✨ About RANNTA
+
+RANNTA is a symbolic, narrative-driven, and technically advanced
+protocol on The Open Network (TON) — building a new class of
+intelligence-powered financial and creative tools.
+
+The RANNTA DeFi Router is one of its foundational infrastructural components,
+serving ArcWallet, RANNTAverse Marketplace, and future TON-native systems.
