@@ -90,11 +90,6 @@ RANNTA Liquidity Core (private)
 
 ---
 
-## ⚡ Public API Sketch
-
-This is not the core algorithm — only the public interface shape:
-
-```http
 GET /health
 {
   "ok": true,
@@ -116,6 +111,8 @@ GET /route?from=TON&to=USDT&amount=...
   "impact": "...",
   "route": [...]
 }
+
+
 
 Copyright © 2025 by ilia144000
 All Rights Reserved.
