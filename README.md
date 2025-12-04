@@ -92,32 +92,28 @@ Copy code
 
 ---
 
-## 📡 Public API Examples
-
-### `GET /health`
+### GET /health
 ```json
 {
   "ok": true,
   "service": "RANNTA DeFi Router",
   "version": "phase-4"
 }
-GET /prices
-json
-Copy code
+
+s
 {
   "pair": "TON/USDT",
   "bestPrice": "...",
   "sources": [...]
 }
 GET /route?from=TON&to=USDT&amount=100
-json
-Copy code
 {
   "bestDex": "STON.fi",
   "estimatedOut": "...",
   "impact": "...",
   "route": [...]
 }
+
 
 ## 📜 Licensing & Restrictions
 
