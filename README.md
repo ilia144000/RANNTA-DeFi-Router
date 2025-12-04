@@ -118,50 +118,23 @@ Copy code
   "impact": "...",
   "route": [...]
 }
-🔐 Licensing & Restrictions
-This repository exposes only the public shell.
-Private routing logic and liquidity algorithms are intellectual property of
-RANNTA Protocol.
 
-❌ You may NOT:
-copy or reverse-engineer private routing logic
+## 📜 Licensing & Restrictions
 
-build derivative routing engines for commercial use
+This repository exposes only the **public shell** of the RANNTA Router.  
+Private routing logic and liquidity algorithms are the **intellectual property of the RANNTA Protocol**.
 
-use the RANNTA identity for competing products
+### ❌ You may NOT:
+- copy or reverse-engineer private routing logic  
+- build derivative routing engines for commercial use  
+- use the RANNTA identity for competing products  
+- package, republish, or resell the routing logic  
 
-package or resell the router logic
+### ✔ You MAY:
+- use public API endpoints (`/health`, `/prices`, `/route`) in your applications  
+- build UI integrations  
+- contribute improvements to non-core open code  
 
-✔ You MAY:
-use public API endpoints (/health, /prices, /route) in your applications
-
-build UI integrations
-
-contribute improvements to non-core code
-
-For commercial licensing or partnership, please contact the maintainer.
-
-⚡ Status
-Current Release: Phase-4 (Monitoring UI)
-
-Upcoming Milestones:
-
-Phase-5 → Split execution engine
-
-Phase-6 → Predictive liquidity model
-
-Phase-7 → RANNTA-native optimization layer
-
-✨ About RANNTA
-RANNTA is a symbolic, narrative-driven, and technically advanced
-protocol on The Open Network (TON) — creating new classes of
-intelligence-powered financial and creative tools.
-
-The RANNTA DeFi Router is one of its foundational infrastructural components,
-powering ArcWallet, RANNTAverse Marketplace, and future TON-native systems.
-
-© Copyright
-Copyright © 2025 by ilia144000
-All Rights Reserved.
+For commercial licensing or partnership inquiries, please contact the maintainer.
 
 
