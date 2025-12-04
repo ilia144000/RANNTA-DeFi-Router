@@ -7,94 +7,41 @@
 > **Alpha Release — Public Shell Only**  
 > Core routing logic, liquidity models, and scoring algorithms remain private.
 
-Created and maintained by **ilia144000** — Founder of **RANNTA Protocol**.
+Created and maintained by **ilia144000** — Founder of RANNTA Protocol.
 
 ---
 
 ## 🔍 Overview
 
-The **RANNTA DeFi Router** introduces a missing DeFi primitive in  
+The **RANNTA DeFi Router** introduces a missing DeFi primitive inside  
 **The Open Network (TON): a unified intelligence layer for multi-DEX  
 price discovery, routing, and liquidity evaluation.**
 
-TON currently relies on two major DEXs — **STON.fi** and **DeDust** —  
-yet lacks a shared routing layer, a consolidated price engine,  
-and mechanisms for wallets or dApps to assess execution efficiency.
+Currently, TON relies on two major DEXs — **STON.fi** and **DeDust** —  
+but lacks:
 
-RANNTA Router fills this structural gap through a lightweight, extensible public service:
+- a shared routing layer  
+- a unified price engine  
+- liquidity scoring  
+- large-swap impact heuristics  
+- a public routing API  
 
-- `/prices` → unified TON/USDT pricing  
-- `/route` → best-path routing across DEXs  
-- `/health` → operational heartbeat  
-- minimal monitoring UI
+The RANNTA Router fills this gap by providing:
 
-> ⚠️ Only the **integration layer** is public.  
-> All strategic logic — liquidity weighting, heuristics, multi-route splitting,  
-> and predictive modeling — is proprietary to the RANNTA Protocol.
+- `/prices` — consolidated TON/USDT price feed  
+- `/route` — best-path routing across DEXs  
+- `/health` — operational check  
+- lightweight monitoring UI  
 
----
-
-## 🧠 Why This Project Exists — TON’s Missing DeFi Component
-
-TON is expanding rapidly, yet several critical DeFi primitives are still absent:
-
-1. No intelligent swap aggregator  
-2. No unified, reliable pricing engine  
-3. No liquidity scoring or market-depth insights  
-4. No predictive modeling for slippage or large swaps  
-5. No open routing API for wallets/dApps
-
-These gaps affect:
-
-- wallets  
-- NFT marketplaces  
-- analytics dashboards  
-- trading bots  
-- TON ecosystem developers  
-
-The **RANNTA Router** aims to become the shared, scalable  
-**liquidity intelligence layer** for TON.
+> ⚠ Only the integration layer is public.  
+> All strategic routing logic, weighting models, and predictive heuristics  
+> remain proprietary to the RANNTA Protocol.
 
 ---
 
-## 🧩 Architecture (Public Layer Only)
+## 🚦 API Examples
 
-Client / Wallet / Marketplace
-│
-▼
-RANNTA Router API (public)
-├── /health
-├── /prices
-└── /route
-│
-▼
-Abstraction Layer (open)
-│
-▼
-RANNTA Liquidity Core (private)
-├── multi-DEX indexer
-├── liquidity scoring engine
-├── split-route planner
-├── optimization heuristics
-└── predictive liquidity model
-
-yaml
-Copy code
-
----
-
-## 🚀 Use Cases
-
-- **ArcWallet Gen-5** → in-wallet smart routing  
-- **RANNTAverse Marketplace** → optimal TON ↔ RANNTA swap paths  
-- **Bots & dashboards** → consolidated real-time pricing  
-- **Developers** → stable routing API for TON DeFi tools
-
----
-
-## 📡 API Examples
-
-### **GET /health**
+### **GET `/health`**
 ```json
 {
   "ok": true,
@@ -118,13 +65,43 @@ Copy code
   "impact": "...",
   "route": [...]
 }
+🧩 Architecture (Public Layer Only)
+bash
+Copy code
+Client / Wallet / Marketplace
+      │
+      ▼
+RANNTA Router API
+├── /health
+├── /prices
+└── /route
+      │
+      ▼
+Abstraction Layer (open)
+      │
+      ▼
+RANNTA Liquidity Core (private)
+├── multi-DEX indexer
+├── liquidity scoring engine
+├── split-route planner
+├── optimization heuristics
+└── predictive liquidity model
+🚀 Use Cases
+ArcWallet Gen-5 — in-wallet smart routing
+
+RANNTAverse Marketplace — optimal TON ↔ RANNTA swap paths
+
+Bots & dashboards — unified price feed
+
+Developers — predictable routing API for TON
+
 📜 Licensing & Restrictions
 This repository exposes only the public shell of the RANNTA Router.
-Private routing logic and liquidity algorithms are the
+Private routing logic and liquidity algorithms are
 intellectual property of the RANNTA Protocol.
 
 ❌ You may NOT:
-copy or reverse-engineer private routing logic
+reverse-engineer private routing logic
 
 build derivative routing engines for commercial use
 
@@ -137,10 +114,11 @@ use public API endpoints (/health, /prices, /route)
 
 build UI integrations
 
-contribute improvements to non-core open components
+contribute improvements to non-core components
 
 For commercial licensing or partnership inquiries,
 please contact the maintainer.
 
-yaml
-Copy code
+© 2025 RANNTA Protocol — All Rights Reserved.
+
+
