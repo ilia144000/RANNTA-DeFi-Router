@@ -18,15 +18,15 @@ The **RANNTA DeFi Router** introduces a missing DeFi primitive in
 price discovery, routing, and liquidity evaluation.**
 
 TON currently relies on two major DEXs — **STON.fi** and **DeDust** —  
-yet lacks a shared routing surface, a consolidated price engine,  
-and mechanisms for wallets or dApps to assess swap efficiency.
+yet lacks a shared routing layer, a consolidated price engine,  
+and mechanisms for wallets or dApps to assess execution efficiency.
 
 RANNTA Router fills this structural gap through a lightweight, extensible public service:
 
 - `/prices` → unified TON/USDT pricing  
 - `/route` → best-path routing across DEXs  
 - `/health` → operational heartbeat  
-- minimal monitoring UI  
+- minimal monitoring UI
 
 > ⚠️ Only the **integration layer** is public.  
 > All strategic logic — liquidity weighting, heuristics, multi-route splitting,  
@@ -36,24 +36,24 @@ RANNTA Router fills this structural gap through a lightweight, extensible public
 
 ## 🧠 Why This Project Exists — TON’s Missing DeFi Component
 
-As TON accelerates in adoption, several critical DeFi components remain absent:
+TON is expanding rapidly, yet several critical DeFi primitives are still absent:
 
 1. No intelligent swap aggregator  
-2. No unified and reliable pricing engine  
-3. No liquidity scoring or market-depth analysis  
+2. No unified, reliable pricing engine  
+3. No liquidity scoring or market-depth insights  
 4. No predictive modeling for slippage or large swaps  
-5. No open routing API for developers and analytics platforms  
+5. No open routing API for wallets/dApps
 
-These gaps impact:
+These gaps affect:
 
 - wallets  
 - NFT marketplaces  
-- DeFi dashboards  
+- analytics dashboards  
 - trading bots  
 - TON ecosystem developers  
 
-The **RANNTA Router** is designed to become a shared, scalable  
-**liquidity intelligence layer** for the TON network.
+The **RANNTA Router** aims to become the shared, scalable  
+**liquidity intelligence layer** for TON.
 
 ---
 
@@ -78,21 +78,22 @@ RANNTA Liquidity Core (private)
 ├── optimization heuristics
 └── predictive liquidity model
 
-yaml
-Copy code
 
 ---
 
 ## 🚀 Use Cases
 
-- **ArcWallet Gen-5** — smart routing built into the wallet  
-- **RANNTAverse Marketplace** — optimal TON ↔ RANNTA swap paths  
-- **Bots & dashboards** — consolidated real-time pricing  
-- **Developers** — stable, predictable routing API for TON  
+- **ArcWallet Gen-5** → in-wallet smart routing  
+- **RANNTAverse Marketplace** → optimal TON ↔ RANNTA swap paths  
+- **Bots & dashboards** → consolidated real-time pricing  
+- **Developers** → stable routing API for TON DeFi tools
 
 ---
 
-GET /health
+## 📡 API Examples
+
+### **GET /health**
+```json
 {
   "ok": true,
   "service": "RANNTA DeFi Router",
@@ -137,3 +138,6 @@ use public API endpoints (/health, /prices, /route)
 build UI integrations
 
 contribute improvements to non-core open components
+
+For commercial licensing or partnership inquiries,
+please contact the maintainer.
