@@ -92,20 +92,20 @@ Copy code
 
 ---
 
-### GET /health
-```json
+GET /health
 {
   "ok": true,
   "service": "RANNTA DeFi Router",
   "version": "phase-4"
 }
 
-s
+GET /prices
 {
   "pair": "TON/USDT",
   "bestPrice": "...",
   "sources": [...]
 }
+
 GET /route?from=TON&to=USDT&amount=100
 {
   "bestDex": "STON.fi",
@@ -114,34 +114,26 @@ GET /route?from=TON&to=USDT&amount=100
   "route": [...]
 }
 
+📜 Licensing & Restrictions
 
-## 📜 Licensing & Restrictions
+This repository exposes only the public shell of the RANNTA Router.
+Private routing logic and liquidity algorithms are the
+intellectual property of the RANNTA Protocol.
 
-This repository exposes only the **public shell** of the RANNTA Router.  
+❌ You may NOT:
 
-Private routing logic and liquidity algorithms are the  
-**intellectual property of the RANNTA Protocol**.
+copy or reverse-engineer private routing logic
 
----
+build derivative routing engines for commercial use
 
-### ❌ You may NOT:
+use the RANNTA identity for competing products
 
-- copy or reverse-engineer private routing logic  
-- build derivative routing engines for commercial use  
-- use the RANNTA identity for competing products  
-- package, republish, or resell the routing logic  
+package, republish, or resell the routing logic
 
----
+✔ You MAY:
 
-### ✔ You MAY:
+use public API endpoints (/health, /prices, /route)
 
-- use public API endpoints (`/health`, `/prices`, `/route`)  
-- build UI integrations  
-- contribute improvements to non-core open components  
+build UI integrations
 
----
-
-For commercial licensing or partnership inquiries,  
-please contact the maintainer.
-
-
+contribute improvements to non-core open components
