@@ -92,23 +92,30 @@ RANNTA Liquidity Core (private)
 
 ## ⚡ Public API Sketch
 
-This is **not** the core algorithm — only the public interface shape:
+This is not the core algorithm — only the public interface shape:
 
 ```http
 GET /health
-→ { ok: true, service: "RANNTA DeFi Router", version: "phase-4" }
+{
+  "ok": true,
+  "service": "RANNTA DeFi Router",
+  "version": "phase-4"
+}
 
 GET /prices
-→ { pair: "TON/USDT", bestPrice: "...", sources: [...] }
+{
+  "pair": "TON/USDT",
+  "bestPrice": "...",
+  "sources": [...]
+}
 
 GET /route?from=TON&to=USDT&amount=...
-→ {
-    bestDex: "STON.fi",
-    estimatedOut: "...",
-    impact: "...",
-    route: [...]
-  }
-🛡 Licensing & Intellectual Property
+{
+  "bestDex": "STON.fi",
+  "estimatedOut": "...",
+  "impact": "...",
+  "route": [...]
+}
 
 Copyright © 2025 by ilia144000
 All Rights Reserved.
